@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Agenda2017</string>
+    <!--Nombre Aplicación-->
+    <string name="app_name">Agenda 2017</string>
+    <!--Botones Panel Principal-->
+    <string name="agregar">Agregar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="listar">Listar Contactos</string>
+    <string name="modificar">Modificar</string>
+    
 </resources>
