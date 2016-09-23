@@ -6,5 +6,6 @@
     <string name="eliminar">Eliminar</string>
     <string name="listar">Listar Contactos</string>
     <string name="modificar">Modificar</string>
-    
+    <string name="title_activity_eliminar">Eliminar</string>
+
 </resources>

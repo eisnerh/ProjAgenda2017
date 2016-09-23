@@ -15,6 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Agregar" />
+        <activity android:name=".Buscar" />
+        <activity android:name=".Eliminar" />
+        <activity android:name=".Modificar" />
+        <activity android:name=".pre_Modificar"></activity>
     </application>
 
 </manifest>
