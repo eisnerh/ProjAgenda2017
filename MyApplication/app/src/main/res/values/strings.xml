@@ -1,11 +1,32 @@
 <resources>
     <!--Nombre Aplicación-->
     <string name="app_name">Agenda 2017</string>
+
     <!--Botones Panel Principal-->
     <string name="agregar">Agregar</string>
     <string name="eliminar">Eliminar</string>
     <string name="listar">Listar Contactos</string>
     <string name="modificar">Modificar</string>
+
+    <!--Botones-->
+    <string name="btn_hecho">Hecho</string>
+
+    <!--Activities Panel Principal-->
     <string name="title_activity_eliminar">Eliminar</string>
+
+    <!--Valores de la tabla Personass-->
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="edad">Edad</string>
+    <string name="t_lefono">Télefono</string>
+    <string name="email">Email</string>
+    <string name="alias">Alias</string>
+
+    <!--Hint´s-->
+    <string name="correo_electr_nico">Correo Electrónico</string>
+    <string name="conocido_como">Conocido como</string>
+    <string name="msj_agregar">A continuación introduzca los datos</string>
+    <string name="msj_bienvenida">Bienvenidos</string>
+
 
 </resources>

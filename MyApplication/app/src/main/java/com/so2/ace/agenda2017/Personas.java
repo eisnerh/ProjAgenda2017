@@ -10,11 +10,12 @@ public class Personas {
     private int _edad;
     private String _telefono;
     private String _email;
-    private String  _alias;
+    private String _alias;
 
-    public Personas(){
+    public Personas() {
         //Constructor Vacio
     }
+
     public Personas(String nombre,
                     String apellido,
                     int edad,
@@ -81,8 +82,8 @@ public class Personas {
         return _alias;
     }
 
-    public void set_tiposangre(String _tiposangre) {
-        this._alias = _tiposangre;
+    public void set_tiposangre(String _alias) {
+        this._alias = _alias;
     }
 }
 

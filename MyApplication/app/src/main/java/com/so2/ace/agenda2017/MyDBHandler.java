@@ -67,7 +67,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
 
     }
 
-    public void updatepersona(Personas personas){
+    public void updatepersona(Personas personas) {
         ContentValues values = new ContentValues();
         values.put(COLUMN_NOMBRE, personas.get_nombre());
         values.put(COLUMN_APELLIDO, personas.get_apellido());
@@ -76,14 +76,14 @@ public class MyDBHandler extends SQLiteOpenHelper {
         values.put(COLUMN_EMAIL, personas.get_email());
         values.put(COLUMN_SANGRE, personas.get_tiposangre());
         SQLiteDatabase db = getWritableDatabase();
-        db.update(TABLA_PERSONAS, values, COLUMN_ID + "= ?", new String[] { String.valueOf(personas.get_id())});
+        db.update(TABLA_PERSONAS, values, COLUMN_ID + "= ?", new String[]{String.valueOf(personas.get_id())});
         db.close();
 
     }
 
     // Borrar una persona de la Base de Datos
 
-    public void borrarPersona(int persona_id){
+    public void borrarPersona(int persona_id) {
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL("DELETE FROM " + TABLA_PERSONAS + " WHERE " + COLUMN_ID + " = " + persona_id + ";");
         db.close();
@@ -91,7 +91,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
 
     //listar por id
 
-    public Cursor personabyid(int id){
+    public Cursor personabyid(int id) {
         SQLiteDatabase db = getWritableDatabase();
         String query = "SELECT * FROM " + TABLA_PERSONAS + " WHERE " + COLUMN_ID + " = " + id + ";";
         Cursor c = db.rawQuery(query, null);
@@ -104,7 +104,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     }
 
     //listar a todas las personas
-    public Cursor listarpersonas(){
+    public Cursor listarpersonas() {
         SQLiteDatabase db = getReadableDatabase();
         String query = ("SELECT * FROM " + TABLA_PERSONAS + " WHERE 1 ORDER BY " + COLUMN_APELLIDO + ";");
         Cursor c = db.rawQuery(query, null);
