@@ -18,4 +18,24 @@ public class MainActivity extends AppCompatActivity {
         Intent agregar = new Intent(this, Agregar.class);
         startActivity(agregar);
     }
+
+    //botón Eliminar para llamar al activity activity_eliminar
+    public void btnEliminar(View view){
+        Intent eliminar = new Intent(this, Eliminar.class);
+        startActivity(eliminar);
+    }
+
+    //botón buscar para llamar al activity activity_buscar
+    public void btnBuscar(View view){
+        Intent buscar = new Intent(this, Buscar.class);
+        startActivity(buscar);
+    }
+
+    //botón modificar para llamar al activity activity_buscar
+    public void btnModificar(View view){
+        Intent modificar = new Intent(this, Modificar.class);
+        startActivity(modificar);
+    }
+
+
 }

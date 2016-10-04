@@ -37,21 +37,17 @@
             android:id="@+id/modificar_btn"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_row="1"
-            android:onClick="premodificar"
+            android:onClick="btnModificar"
             android:text="@string/modificar"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <Button
             android:id="@+id/listarbtn"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_row="0"
-            android:onClick="onListar"
+            android:onClick="btnBuscar"
             android:text="@string/listar"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
     </LinearLayout>
 
     <LinearLayout
@@ -64,9 +60,7 @@
             android:id="@+id/agregarbtn"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_row="0"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:onClick="btnAgregar"
             android:text="@string/agregar" />
 
@@ -74,10 +68,8 @@
             android:id="@+id/eliminar_btn"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_row="1"
-            android:layout_weight="1"
-            android:onClick="onEliminar"
+            android:layout_weight="3"
+            android:onClick="btnEliminar"
             android:text="@string/eliminar" />
 
     </LinearLayout>
