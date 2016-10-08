@@ -2,11 +2,13 @@
   <dictionary name="eisne">
     <words>
       <w>agregar</w>
+      <w>apellido</w>
       <w>botón</w>
       <w>buscar</w>
       <w>eliminar</w>
       <w>llamar</w>
       <w>modificar</w>
+      <w>nombre</w>
     </words>
   </dictionary>
 </component>

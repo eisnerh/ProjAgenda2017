@@ -27,6 +27,8 @@
     <string name="conocido_como">Conocido como</string>
     <string name="msj_agregar">A continuación introduzca los datos</string>
     <string name="msj_bienvenida">Bienvenidos</string>
+    <string name="msj_Eliminar">Introduzca el codigo de la persona y oprima eliminar</string>
+    <string name="id">Id</string>
 
 
 </resources>
