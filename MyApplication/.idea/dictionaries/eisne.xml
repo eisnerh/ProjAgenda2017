@@ -6,9 +6,12 @@
       <w>botón</w>
       <w>buscar</w>
       <w>eliminar</w>
+      <w>extracción</w>
+      <w>lista</w>
       <w>llamar</w>
       <w>modificar</w>
       <w>nombre</w>
+      <w>propiedades</w>
     </words>
   </dictionary>
 </component>

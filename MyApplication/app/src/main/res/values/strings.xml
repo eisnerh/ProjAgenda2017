@@ -29,6 +29,7 @@
     <string name="msj_bienvenida">Bienvenidos</string>
     <string name="msj_Eliminar">Introduzca el codigo de la persona y oprima eliminar</string>
     <string name="id">Id</string>
+    <string name="msj_Lista">Lista de Contactos</string>
 
 
 </resources>
