@@ -4,9 +4,9 @@ import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 public class ToDo extends AppCompatActivity {
     //Crea una etiqueta que guarda el registro de actividad
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "ToDo";
     //Variable para llamar a la tabla de la base de datos
     private TaskDbHelper mHelper;
     //Carga los datos en el list view
@@ -36,7 +36,7 @@ public class ToDo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_to_do);
         //Inicializa la Base de Datos en SQLite
         mHelper = new TaskDbHelper(this);
         mTaskListView = (ListView) findViewById(R.id.list_todo);

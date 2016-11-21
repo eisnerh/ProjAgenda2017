@@ -37,5 +37,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(modificar);
     }
 
+    //botón modificar para llamar al activity activity_buscar
+    public void btnListar(View view){
+        Intent listar = new Intent(this, ToDo.class);
+        startActivity(listar);
+    }
+
 
 }

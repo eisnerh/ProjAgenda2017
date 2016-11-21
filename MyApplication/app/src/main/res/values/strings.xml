@@ -33,6 +33,7 @@
     <string name="add_task">Add Task</string>
     <string name="hello">Saludo</string>
     <string name="btn_Done">Hecho</string>
+    <string name="btn_task_list">Lista de Tareas</string>
 
 
 </resources>

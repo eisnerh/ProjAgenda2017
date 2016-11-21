@@ -48,6 +48,24 @@
             android:onClick="btnBuscar"
             android:text="@string/listar"
             android:layout_weight="3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <Button
+            android:id="@+id/b_task_list"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:onClick="btnListar"
+            android:text="@string/btn_task_list"
+            android:layout_weight="3" />
+
+
     </LinearLayout>
 
     <LinearLayout
