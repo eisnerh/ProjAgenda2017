@@ -19,7 +19,8 @@
         <activity android:name=".Buscar" />
         <activity android:name=".Eliminar" />
         <activity android:name=".Modificar" />
-        <activity android:name=".pre_Modificar"></activity>
+        <activity android:name=".pre_Modificar" />
+        <activity android:name=".ToDo"></activity>
     </application>
 
 </manifest>

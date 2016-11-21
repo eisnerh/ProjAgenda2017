@@ -30,6 +30,9 @@
     <string name="msj_Eliminar">Introduzca el codigo de la persona y oprima eliminar</string>
     <string name="id">Id</string>
     <string name="msj_Lista">Lista de Contactos</string>
+    <string name="add_task">Add Task</string>
+    <string name="hello">Saludo</string>
+    <string name="btn_Done">Hecho</string>
 
 
 </resources>
