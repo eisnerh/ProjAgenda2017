@@ -1,8 +1,7 @@
 package com.so2.ace.agenda2017;
 
-/**
- * Created by eisne on 24/9/2016.
- */
+// Hecho por Eisner López Acevedo
+
 public class Personas {
     private int _id;
     private String _nombre;

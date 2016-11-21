@@ -4,9 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by eisne on 21/11/2016.
- */
+// Hecho por Eisner López Acevedo
 
 public class TaskDbHelper extends SQLiteOpenHelper {
 

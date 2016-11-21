@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.so2.ace.agenda2017.Eliminar">
-
+    <!--Hecho por Eisner López Acevedo-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -8,9 +8,8 @@ import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 
-/**
- * Created by eisne on 3/10/2016.
- */
+// Hecho por Eisner López Acevedo
+
 public class TodoCursorAdapter extends CursorAdapter {
     public TodoCursorAdapter(Context context, Cursor cursor) {
         super(context, cursor, 0);

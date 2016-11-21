@@ -2,9 +2,7 @@ package com.so2.ace.agenda2017.db;
 
 import android.provider.BaseColumns;
 
-/**
- * Created by eisne on 21/11/2016.
- */
+// Hecho por Eisner López Acevedo
 
 public class TaskContract {
     //The TaskContract class defines constants which used to access the data in the database

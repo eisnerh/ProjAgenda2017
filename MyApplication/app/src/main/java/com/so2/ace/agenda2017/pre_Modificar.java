@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-
+// Hecho por Eisner López Acevedo
 public class pre_Modificar extends AppCompatActivity {
 
     EditText modificar_input;
