@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     //botón modificar para llamar al activity activity_buscar
     public void btnModificar(View view){
-        Intent modificar = new Intent(this, Modificar.class);
+        Intent modificar = new Intent(this, pre_Modificar.class);
         startActivity(modificar);
     }
 

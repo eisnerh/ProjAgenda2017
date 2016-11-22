@@ -85,4 +85,3 @@ public class Personas {
         this._alias = _alias;
     }
 }
-

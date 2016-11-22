@@ -10,14 +10,35 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.so2.ace.agenda2017.MainActivity">
-    <!--Hecho por Eisner López Acevedo-->
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2">
 
-        <TextView
+    <!--Hecho por Eisner López Acevedo-->
+
+
+    <Button
+      android:id="@+id/eliminar_btn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+
+      android:onClick="btnEliminar"
+      android:text="@string/eliminar" />
+
+    <Button
+      android:id="@+id/agregar_btn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+
+      android:onClick="btnAgregar"
+      android:text="@string/agregar" />
+
+    <Button
+        android:id="@+id/b_task_list"
+
+        android:layout_height="wrap_content"
+        android:onClick="btnListar"
+        android:text="@string/btn_task_list"
+        android:layout_width="match_parent" />
+
+    <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/msj_bienvenida"
@@ -25,72 +46,22 @@
             android:textAlignment="center"
             android:textStyle="normal|bold"
             android:textColor="@color/colorAccent" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2">
 
         <Button
             android:id="@+id/modificar_btn"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="btnModificar"
             android:text="@string/modificar"
-            android:layout_weight="3" />
+             />
 
         <Button
             android:id="@+id/listarbtn"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="btnBuscar"
             android:text="@string/listar"
-            android:layout_weight="3" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2">
-
-        <Button
-            android:id="@+id/b_task_list"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:onClick="btnListar"
-            android:text="@string/btn_task_list"
-            android:layout_weight="3" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="2">
-
-        <Button
-            android:id="@+id/agregarbtn"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:onClick="btnAgregar"
-            android:text="@string/agregar" />
-
-        <Button
-            android:id="@+id/eliminar_btn"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:onClick="btnEliminar"
-            android:text="@string/eliminar" />
-
-    </LinearLayout>
-
+             />
 
 </LinearLayout>

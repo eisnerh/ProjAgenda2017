@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 // Hecho por Eisner López Acevedo
 public class Agregar extends AppCompatActivity {
-
     MyDBHandler dbHandler;
     EditText nombre_input;
     EditText apellido_input;
@@ -17,7 +16,6 @@ public class Agregar extends AppCompatActivity {
     EditText telefono_input;
     EditText email_input;
     EditText alias_input;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,22 +44,16 @@ public class Agregar extends AppCompatActivity {
         confirmacion();
         limpiarcampos();
     }
-
-
     //Limpia los valores entrados para efectos de estetica
     public void limpiarcampos() {
-
         nombre_input.setText("");
         apellido_input.setText("");
         edad_input.setText("");
         telefono_input.setText("");
         email_input.setText("");
         alias_input.setText("");
-
     }
-
     public void confirmacion() {
-
         AlertDialog.Builder dlgAlert = new AlertDialog.Builder(this);
         dlgAlert.setMessage("Se ha agregado exitosamente!");
         dlgAlert.setTitle("Agregar Persona");
@@ -74,5 +66,4 @@ public class Agregar extends AppCompatActivity {
         dlgAlert.setCancelable(true);
         dlgAlert.create().show();
     }
-
 }
