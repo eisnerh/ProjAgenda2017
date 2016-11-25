@@ -15,7 +15,8 @@
         android:layout_below="@+id/id_txt"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:cacheColorHint="@android:color/holo_orange_dark" />
+        android:cacheColorHint="@android:color/holo_orange_dark"
+        />
 
     <TextView
         android:layout_width="50dp"
