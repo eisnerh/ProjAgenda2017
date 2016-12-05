@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="action_edit" type="id">Edit</item>
+    <item name="action_delete" type="id">Delete</item>
+    <item name="tv_phone_number" type="id">Phone</item>
+    <item name="tv_specialty" type="id">specialty</item>
+    <item name="tv_bio" type="id">Bio</item>
+</resources>

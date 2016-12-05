@@ -1,4 +1,4 @@
-package com.so2.ace.agenda2017;
+package com.so2.ace.agenda2017.Contactos;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -6,6 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ListView;
+
+import com.so2.ace.agenda2017.Contactos.dbContactos.MyDBHandler;
+import com.so2.ace.agenda2017.R;
+import com.so2.ace.agenda2017.TodoCursorAdapter;
+
 // Hecho por Eisner López Acevedo
 public class Buscar extends AppCompatActivity {
 

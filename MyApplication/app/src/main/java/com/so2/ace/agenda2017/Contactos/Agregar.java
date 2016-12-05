@@ -1,12 +1,16 @@
-package com.so2.ace.agenda2017;
+package com.so2.ace.agenda2017.Contactos;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+
+import com.so2.ace.agenda2017.Contactos.dbContactos.MyDBHandler;
+import com.so2.ace.agenda2017.Contactos.dbContactos.Personas;
+import com.so2.ace.agenda2017.R;
+
 // Hecho por Eisner López Acevedo
 public class Agregar extends AppCompatActivity {
     MyDBHandler dbHandler;

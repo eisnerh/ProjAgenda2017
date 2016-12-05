@@ -8,19 +8,28 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Contactos.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Agregar" />
-        <activity android:name=".Buscar" />
-        <activity android:name=".Eliminar" />
-        <activity android:name=".Modificar" />
-        <activity android:name=".pre_Modificar" />
-        <activity android:name=".ToDo"></activity>
+        <activity android:name=".Contactos.Agregar" />
+        <activity android:name=".Contactos.Buscar" />
+        <activity android:name=".Contactos.Eliminar" />
+        <activity android:name=".Contactos.Modificar" />
+        <activity android:name=".Contactos.pre_Modificar" />
+        <activity android:name=".ToDo" />
+        <activity
+            android:name=".lawyers.Lawyers"
+            android:label="@string/title_activity_lawyers"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".lawyers.LawyersFragment" />
+        <activity
+            android:name=".lawyerdetail.LawyerDetailActivity"
+            android:label="@string/title_activity_lawyer_detail"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
