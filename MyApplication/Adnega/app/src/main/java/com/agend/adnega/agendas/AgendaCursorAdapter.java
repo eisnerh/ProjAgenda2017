@@ -61,6 +61,11 @@ class AgendaCursorAdapter extends CursorAdapter {
         nameText.setText(name);
         horaText.setText(hora);
         Glide
+                //Glide hace parte de una librería con el mismo nombre,
+                // cuyo objetivo es cargar imágenes de forma eficiente.
+
+                //Básicamente ese código carga la imagen desde la carpeta assets en forma de Bitmap
+                // sobre el view avatarImage.
                 .with(context)
                 .load(Uri.parse("file:///android_asset/" + avatarUri))
                 .asBitmap()

@@ -141,6 +141,8 @@ public class AgendasFragment extends Fragment {
             return mAgendaDbHelper.getAllData();
         }
 
+        // doInBackground para usar el método getAllLawyers()
+        // y luego cambia el cursor del adaptador en onPostExecute() con swapCursor().
         @Override
         protected void onPostExecute(Cursor cursor) {
             if (cursor != null && cursor.getCount() > 0) {

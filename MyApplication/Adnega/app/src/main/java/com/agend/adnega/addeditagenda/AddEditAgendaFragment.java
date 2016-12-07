@@ -73,6 +73,15 @@ public class AddEditAgendaFragment extends Fragment {
 
         // Referencias UI
         mSaveButton = (FloatingActionButton) getActivity().findViewById(R.id.fab);
+        /*El punto de interacción en el fab button obedece al siguiente flujo:
+
+        Usuario modifica campos de texto con datos de agenda
+        Usuario pulsa botón de guardado
+        Se inicia tarea asíncrona
+        Actualización: Ejecutar método update()
+        Inserción: Ejecutar método insert()
+        Se muestra la lista de abogados con la modificación*/
+
         mTituloField = (TextInputEditText) root.findViewById(R.id.et_name);
         mLugarField = (TextInputEditText) root.findViewById(R.id.et_phone_number);
         mHoraField = (TextInputEditText) root.findViewById(R.id.et_specialty);

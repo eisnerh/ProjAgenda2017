@@ -21,14 +21,16 @@ public class AddEditAgendaActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        String lawyerId = getIntent().getStringExtra(AgendaActivity.EXTRA_AGENDAS_ID);
+        String agendaId = getIntent().getStringExtra(AgendaActivity.EXTRA_AGENDAS_ID);
+        //se verifica el contenido del ID del agenda para
+        // determinar si se cargan los datos de un elemento existente.
 
-        setTitle(lawyerId == null ? "Añadir Agenda" : "Editar Agenda");
+        setTitle(agendaId == null ? "Añadir Agenda" : "Editar Agenda");
 
         AddEditAgendaFragment addEditAgendaFragment = (AddEditAgendaFragment)
                 getSupportFragmentManager().findFragmentById(R.id.content_add_edit_agenda);
         if (addEditAgendaFragment == null) {
-            addEditAgendaFragment = addEditAgendaFragment.newInstance(lawyerId);
+            addEditAgendaFragment = addEditAgendaFragment.newInstance(agendaId);
             getSupportFragmentManager()
                     .beginTransaction()
                     .add(R.id.content_add_edit_agenda, addEditAgendaFragment)

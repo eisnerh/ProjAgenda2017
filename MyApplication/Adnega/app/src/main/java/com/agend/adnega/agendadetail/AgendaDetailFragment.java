@@ -66,6 +66,8 @@ public class AgendaDetailFragment extends Fragment {
             mAgendaId = getArguments().getString(ARG_AGENDA_ID);
         }
 
+        //Habilita la contribución de AgendaDetailFragment a la Toolbar
+        // con el método setHasOptionsMenu() con el valor.
         setHasOptionsMenu(true);
     }
 
@@ -85,6 +87,8 @@ public class AgendaDetailFragment extends Fragment {
 
         loadAgenda();
 
+        // través de un método loadAgenda().
+
         return root;
     }
 
@@ -95,11 +99,16 @@ public class AgendaDetailFragment extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
+        // En el abre una estructura switch y procesa los casos de edición y eliminación.
         switch (item.getItemId()) {
             case R.id.action_edit:
                 showEditScreen();
                 break;
             case R.id.action_delete:
+                // Para manejar el evento de borrado, crea una nueva tarea asíncrona que llame a DeleteAgendaTask.
+
+
                 new DeleteAgendaTask().execute();
                 break;
         }
@@ -109,7 +118,13 @@ public class AgendaDetailFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode,
                                  int resultCode, Intent data) {
+        //Se requiere onActivityResult() ya que cuando se intente eliminar o editar la
+        // agenda se estará pendiente de cambios en la base de datos,
+        // así que podremos reportar a AgendasFragment la necesidad de actualizar la lista.
         if (requestCode == AgendasFragment.REQUEST_UPDATE_DELETE_AGENDA) {
+
+            //REQUEST_UPDATE_DELETE_AGENDA es una constante entera que representa la vía
+            // de comunicación entre la screen de agendas y la de detalles.
             if (resultCode == Activity.RESULT_OK) {
                 getActivity().setResult(Activity.RESULT_OK);
                 getActivity().finish();
@@ -144,15 +159,22 @@ public class AgendaDetailFragment extends Fragment {
 
     private void showLoadError() {
         Toast.makeText(getActivity(),
+                // De lo contrario muestra un error:
                 "Error al cargar información", Toast.LENGTH_SHORT).show();
     }
 
     private void showDeleteError() {
         Toast.makeText(getActivity(),
+                // De lo contrario muestra un error:
                 "Error al eliminar información", Toast.LENGTH_SHORT).show();
     }
 
     private class GetAgendaByIdTask extends AsyncTask<Void, Void, Cursor> {
+
+        // Carga el detalle de la agenda con el método getLawyerById() con una tarea asíncrona.
+
+
+
 
         @Override
         protected Cursor doInBackground(Void... voids) {
@@ -161,9 +183,14 @@ public class AgendaDetailFragment extends Fragment {
 
         @Override
         protected void onPostExecute(Cursor cursor) {
+            // En onPostExecute() extrae cada uno de los valores de la columna y asígnalos
+            // en los views de texto para poblar el detalle.
             if (cursor != null && cursor.moveToLast()) {
                 showAgenda(new Agenda(cursor));
             } else {
+                // En postExecute() cierra la actividad de detalle con un resultado favorable
+                // hacia la actividad de agendas en caso de que la eliminación fuese exitosa.
+                // De lo contrario muestra un error:
                 showLoadError();
             }
         }
@@ -172,6 +199,7 @@ public class AgendaDetailFragment extends Fragment {
 
     private class DeleteAgendaTask extends AsyncTask<Void, Void, Integer> {
 
+        //En doInBackground() llama a LawyersDbHelper.deleteLawyer().
         @Override
         protected Integer doInBackground(Void... voids) {
             return mAgendaDbHelper.deleteAgenda(mAgendaId);
