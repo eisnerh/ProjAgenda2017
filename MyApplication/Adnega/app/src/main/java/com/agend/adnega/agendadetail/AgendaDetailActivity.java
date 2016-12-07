@@ -8,6 +8,7 @@ import android.view.Menu;
 import com.agend.adnega.R;
 import com.agend.adnega.agendas.AgendaActivity;
 
+//Hecho por Eisner López Acevedo
 public class AgendaDetailActivity extends AppCompatActivity {
 
     @Override

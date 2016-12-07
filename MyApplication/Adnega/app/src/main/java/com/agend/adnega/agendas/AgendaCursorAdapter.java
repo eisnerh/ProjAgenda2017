@@ -18,19 +18,25 @@ import com.agend.adnega.bdData.AgendaContract;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 
-/**
- * Created by eisne on 4/12/2016.
- */
+//Hecho por Eisner López Acevedo
 
 class AgendaCursorAdapter extends CursorAdapter {
+
+    // CursorAdapter es una clase abstracta de la cual se ha de crear tu adaptador personalizado.
+    // Con ArrayAdapter teníamos que sobrescribir el método getView()
+    // para inflar nuestras filas con los datos de la lista.
     AgendaCursorAdapter(Context context, Cursor c) {
 
+        // constructor que transmita los parámetros a través de super para mantener la herencia.
         super(context, c, 0);
     }
 
     @Override
     public View newView(Context context,
                         Cursor cursor, ViewGroup viewGroup) {
+        // newView() es quien infla cada view de la lista.
+        //
+        // no es necesario repetir ya que esto es manejado internamente.
         LayoutInflater inflater = LayoutInflater.from(context);
         return inflater.inflate(R.layout.list_item_agenda, viewGroup, false);
 
@@ -38,6 +44,8 @@ class AgendaCursorAdapter extends CursorAdapter {
 
     @Override
     public void bindView(View view, final Context context, Cursor cursor) {
+        // bindView() es el encargado de poblar la lista con los datos del cursor
+        // no es necesario repetir ya que esto es manejado internamente.
 
         // Referencias UI.
         TextView nameText = (TextView) view.findViewById(R.id.tv_titulo);

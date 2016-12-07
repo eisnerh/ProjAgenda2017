@@ -29,6 +29,8 @@ import com.bumptech.glide.Glide;
  * A simple {@link Fragment} subclass.
  * Use the {@link AgendaDetailFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
+ * //Hecho por Eisner López Acevedo
  */
 public class AgendaDetailFragment extends Fragment {
     private static final String ARG_AGENDA_ID = "agendaId";

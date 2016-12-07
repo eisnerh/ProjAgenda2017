@@ -2,24 +2,41 @@ package com.agend.adnega.bdData;
 
 import android.content.Context;
 import android.database.Cursor;
+//Cursor es un apuntador al conjunto de valores obtenidos de la consulta.
+// Al inicio el cursor apunta a una dirección previa a la primera fila.
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by eisne on 4/12/2016.
- */
+//Hecho por Eisner López Acevedo
+
 
 public class AgendaDbHelper extends SQLiteOpenHelper {
-    public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "agenda.db";
 
+
+    //Crea nueva clase que extienda de SQLiteOpenHelper y llamala AgendaDbHelper.
+
+
+
+    public static final int DATABASE_VERSION = 1; //versión de la base de datos iniciada en 1.
+    public static final String DATABASE_NAME = "agenda.db"; //Nombre de la base de datos.
+
+    //constructor y usa super para mantener la herencia del helper.
     public AgendaDbHelper(Context context) {
+        //guarda el contexto de la base de datos, llamamando a las variables arriba indicadas
+        //Contexto de acción para el helper.
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
+        //Tabla de la Base de Datos
+
+        //id, titulo, lugar, hora, desc, foto.
+
         db.execSQL("CREATE TABLE " + AgendaContract.AgendaEntry.TABLE_NAME + " ("
+                //Es recomendable que la llave primaria sea AgendaEntry._ID,
+                // ya que el framework de Android usa esta referencia internamente en varios procesos.
                 + AgendaContract.AgendaEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + AgendaContract.AgendaEntry.ID + " TEXT NOT NULL,"
                 + AgendaContract.AgendaEntry.TITULO + " TEXT NOT NULL,"
@@ -27,6 +44,7 @@ public class AgendaDbHelper extends SQLiteOpenHelper {
                 + AgendaContract.AgendaEntry.HORA + " TEXT NOT NULL,"
                 + AgendaContract.AgendaEntry.DESC + " TEXT NOT NULL,"
                 + AgendaContract.AgendaEntry.AVATAR_URI + " TEXT,"
+                //índice UNIQUE para mantener la unicidad de filas.
                 + "UNIQUE (" + AgendaContract.AgendaEntry.ID + "))");
 
 
@@ -52,6 +70,7 @@ public class AgendaDbHelper extends SQLiteOpenHelper {
 
     }
 
+    //inserta los datos de datos fictisios en la tabla.
     public long mockAgenda(SQLiteDatabase db, Agenda agenda) {
         return db.insert(
                 AgendaContract.AgendaEntry.TABLE_NAME,
@@ -65,6 +84,7 @@ public class AgendaDbHelper extends SQLiteOpenHelper {
         // No hay operaciones
     }
 
+    //guarda la agenda
     public long saveAgenda(Agenda agenda) {
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
@@ -78,6 +98,9 @@ public class AgendaDbHelper extends SQLiteOpenHelper {
     //obtiene la lista de tareas
     public Cursor getAllData() {
         return getReadableDatabase()
+                // En cuestiones de lectura getReadableDatabase().
+
+                // obtener los registros de nuestra tabla usaremos el método query().
                 .query(
                         AgendaContract.AgendaEntry.TABLE_NAME,
                         null,
@@ -90,6 +113,14 @@ public class AgendaDbHelper extends SQLiteOpenHelper {
 
     //obtiene la lista de tarea por el id.
     public Cursor getAgendaById(String agendaId) {
+
+        //Cursor es un apuntador al conjunto de valores obtenidos de la consulta.
+        // Al inicio el cursor apunta a una dirección previa a la primera fila.
+        //
+        //Usa getWritableDatabase() para obtener el manejador de la base de datos para operaciones de escritura.
+
+
+
         Cursor c = getReadableDatabase().query(
                 AgendaContract.AgendaEntry.TABLE_NAME,
                 null,
@@ -101,6 +132,7 @@ public class AgendaDbHelper extends SQLiteOpenHelper {
         return c;
     }
 
+    //elimana el valor indicado por medio de la id de la agenda
     public int deleteAgenda(String agendaId) {
         return getWritableDatabase().delete(
                 AgendaContract.AgendaEntry.TABLE_NAME,
@@ -108,6 +140,7 @@ public class AgendaDbHelper extends SQLiteOpenHelper {
                 new String[]{agendaId});
     }
 
+    //actualiza los datos de un valor existente en la base de datos.
     public int updateAgenda(Agenda agenda, String agendaId) {
         return getWritableDatabase().update(
                 AgendaContract.AgendaEntry.TABLE_NAME,

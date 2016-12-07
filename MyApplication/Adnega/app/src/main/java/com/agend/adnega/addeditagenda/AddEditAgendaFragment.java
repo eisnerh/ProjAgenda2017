@@ -20,6 +20,8 @@ import com.agend.adnega.bdData.Agenda;
 import com.agend.adnega.bdData.AgendaDbHelper;
 
 /**
+ *
+ * Hecho por Eisner López Acevedo
  * A simple {@link Fragment} subclass.
  */
 public class AddEditAgendaFragment extends Fragment {

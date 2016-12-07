@@ -6,10 +6,10 @@ import android.database.Cursor;
 
 import java.util.UUID;
 
-/**
- * Created by eisne on 4/12/2016.
- */
+//Hecho por Eisner López Acevedo
 
+
+//El esquema se establecerá en una clase donde se definen los de tabla, columna y uri para un uso global.
 public class Agenda {
     private String id;
     private String titulo;
@@ -32,6 +32,8 @@ public class Agenda {
     }
 
     public Agenda(Cursor cursor) {
+        //Cursor es un apuntador al conjunto de valores obtenidos de la consulta.
+        // Al inicio el cursor apunta a una dirección previa a la primera fila.
         id = cursor.getString(cursor.getColumnIndex(AgendaContract.AgendaEntry.ID));
         titulo = cursor.getString(cursor.getColumnIndex(AgendaContract.AgendaEntry.TITULO));
         lugar = cursor.getString(cursor.getColumnIndex(AgendaContract.AgendaEntry.LUGAR));
@@ -41,6 +43,7 @@ public class Agenda {
     }
 
     public ContentValues toContentValues() {
+        //traducción de pares
         ContentValues values = new ContentValues();
         values.put(AgendaContract.AgendaEntry.ID, id);
         values.put(AgendaContract.AgendaEntry.TITULO, titulo);

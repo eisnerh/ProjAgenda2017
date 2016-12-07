@@ -6,6 +6,8 @@ import android.support.v7.widget.Toolbar;
 
 import com.agend.adnega.R;
 
+
+//Hecho por Eisner López Acevedo
 public class AgendaActivity extends AppCompatActivity {
 
     public static final String EXTRA_AGENDAS_ID = "extra_agenda_id";
@@ -24,6 +26,8 @@ public class AgendaActivity extends AppCompatActivity {
             fragment = AgendasFragment.newInstance();
             getSupportFragmentManager()
                     .beginTransaction()
+                    //transacción del tipo add()
+                    // para insertar el fragmento en el contenedor principal.
                     .add(R.id.content_agenda, fragment)
                     .commit();
         }

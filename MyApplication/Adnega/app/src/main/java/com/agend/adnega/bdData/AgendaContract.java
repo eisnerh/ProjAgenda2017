@@ -2,12 +2,19 @@ package com.agend.adnega.bdData;
 
 import android.provider.BaseColumns;
 
-/**
- * Created by eisne on 4/12/2016.
- */
+//Hecho por Eisner López Acevedo
 
 public class AgendaContract {
     public static abstract class AgendaEntry implements BaseColumns {
+
+        /*La documentación de Android nos recomienda crear una
+    clase llamada Contract Class,
+    la cual guarda como constantes todas las características de la base de datos.*/
+
+        //Creamos la clase interna AgendaEntry para guardar el
+        // nombre de las columnas de la tabla.
+        //Se implementó la interfaz BaseColumns
+        // con el fin de agregar una columna extra que se recomienda tenga toda tabla.
 
         public static final String TABLE_NAME ="agenda";
 

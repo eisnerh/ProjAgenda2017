@@ -25,6 +25,8 @@ import com.agend.adnega.bdData.AgendaDbHelper;
  * A simple {@link Fragment} subclass.
  * Use the {@link AgendasFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
+ * //Hecho por Eisner López Acevedo
  */
 public class AgendasFragment extends Fragment {
     public static final int REQUEST_UPDATE_DELETE_AGENDA = 2;
@@ -92,6 +94,11 @@ public class AgendasFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode,
                                  int resultCode, Intent data) {
+
+        //La aparición del método onActivityResult()
+        // se debe a que la lista que tendrá el fragmento debe
+        // refrescarse en caso de que las screens de inserción o detalle
+        // hayan producido una modificación de la tabla agenda
         if (Activity.RESULT_OK == resultCode) {
             switch (requestCode) {
                 case AddEditAgendaActivity.REQUEST_ADD_AGENDA:
