@@ -135,7 +135,7 @@ public class AgendaDetailFragment extends Fragment {
     private void showAgenda(Agenda agenda) {
         mCollapsingView.setTitle(agenda.getTitulo());
         Glide.with(this)
-                .load(Uri.parse("file:///android_asset/" + agenda.getAvatarUri()))
+                .load(Uri.parse("file:///android_asset/agenda.jpg" ))
                 .centerCrop()
                 .into(mAvatar);
         mLugar.setText(agenda.getLugar());

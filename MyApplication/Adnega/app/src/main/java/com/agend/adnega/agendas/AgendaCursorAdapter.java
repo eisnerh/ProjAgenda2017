@@ -54,7 +54,7 @@ class AgendaCursorAdapter extends CursorAdapter {
 
         // Get valores.
         String name = cursor.getString(cursor.getColumnIndex(AgendaContract.AgendaEntry.TITULO));
-        String avatarUri = cursor.getString(cursor.getColumnIndex(AgendaContract.AgendaEntry.AVATAR_URI));
+        String avatarUri = "agenda.jpg";
         String hora = cursor.getString(cursor.getColumnIndex(AgendaContract.AgendaEntry.HORA));
 
         // Setup.

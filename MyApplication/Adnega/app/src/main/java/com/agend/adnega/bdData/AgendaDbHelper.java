@@ -56,17 +56,17 @@ public class AgendaDbHelper extends SQLiteOpenHelper {
 
     private void mockData(SQLiteDatabase sqLiteDatabase) {
         mockAgenda(sqLiteDatabase, new Agenda("Visita al Dentista", "San Carlos",
-                "10:00:00", "Gran profesional con experiencia de 5 años.",
-                "tareas_check.png"));
+                "10:00", "Gran profesional con experiencia de 5 años.",
+                "agenda.jpg"));
         mockAgenda(sqLiteDatabase, new Agenda("Claro", "Centro, San Carlos",
-                "11:00:00", "Cambio de Plan.",
-                "tareas_check.png"));
+                "11:00", "Cambio de Plan.",
+                "agenda.jpg"));
         mockAgenda(sqLiteDatabase, new Agenda("Visita al Pediatra", "Ebais San Carlos",
-                "11:30:00", "Vacuna 4 años.",
-                "tareas_check.png"));
+                "11:30", "Vacuna 4 años.",
+                "agenda.jpg"));
         mockAgenda(sqLiteDatabase, new Agenda("Visita al Veterinario", "Barrio San Antonio",
-                "13:00:00", "Vacunas",
-                "tareas_check.png"));
+                "13:00", "Vacunas",
+                "agenda.jpg"));
 
     }
 
