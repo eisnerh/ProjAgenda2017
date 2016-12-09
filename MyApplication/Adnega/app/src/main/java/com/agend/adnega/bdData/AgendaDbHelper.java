@@ -81,7 +81,8 @@ public class AgendaDbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db,
                           int oldVersion, int newVersion) {
-        // No hay operaciones
+        db.execSQL("DROP TABLE IF EXISTS " + AgendaContract.AgendaEntry.TABLE_NAME);
+        onCreate(db);
     }
 
     //guarda la agenda

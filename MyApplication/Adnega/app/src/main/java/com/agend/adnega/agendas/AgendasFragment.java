@@ -80,7 +80,7 @@ public class AgendasFragment extends Fragment {
         });
 
 
-        getActivity().deleteDatabase(AgendaDbHelper.DATABASE_NAME);
+        //getActivity().deleteDatabase(AgendaDbHelper.DATABASE_NAME);
 
         // Instancia de helper
         mAgendaDbHelper = new AgendaDbHelper(getActivity());

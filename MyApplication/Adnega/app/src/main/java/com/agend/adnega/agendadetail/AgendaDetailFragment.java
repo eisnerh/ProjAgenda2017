@@ -43,6 +43,7 @@ public class AgendaDetailFragment extends Fragment {
     private TextView mHora;
     private TextView mDesc;
 
+
     private AgendaDbHelper mAgendaDbHelper;
 
 
@@ -141,6 +142,7 @@ public class AgendaDetailFragment extends Fragment {
         mLugar.setText(agenda.getLugar());
         mHora.setText(agenda.getHora());
         mDesc.setText(agenda.getDesc());
+
     }
 
     private void showEditScreen() {

@@ -8,7 +8,7 @@ public class TaskContract {
     //The TaskContract class defines constants which used to access the data in the database
 
 
-    public static final String DB_NAME = "com.aziflaj.todolist.db";
+    public static final String DB_NAME = "todolist.db";
     public static final int DB_VERSION = 1;
 
     public class TaskEntry implements BaseColumns {

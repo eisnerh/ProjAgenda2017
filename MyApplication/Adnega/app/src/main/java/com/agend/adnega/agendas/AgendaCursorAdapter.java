@@ -52,14 +52,17 @@ class AgendaCursorAdapter extends CursorAdapter {
         final ImageView avatarImage = (ImageView) view.findViewById(R.id.iv_avatar);
         TextView horaText = (TextView) view.findViewById(R.id.tv_hora);
 
+
         // Get valores.
         String name = cursor.getString(cursor.getColumnIndex(AgendaContract.AgendaEntry.TITULO));
         String avatarUri = "agenda.jpg";
         String hora = cursor.getString(cursor.getColumnIndex(AgendaContract.AgendaEntry.HORA));
 
+
         // Setup.
         nameText.setText(name);
         horaText.setText(hora);
+
         Glide
                 //Glide hace parte de una librería con el mismo nombre,
                 // cuyo objetivo es cargar imágenes de forma eficiente.

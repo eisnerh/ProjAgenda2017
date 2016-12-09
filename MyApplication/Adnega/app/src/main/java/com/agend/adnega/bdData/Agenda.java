@@ -18,6 +18,7 @@ public class Agenda {
     private String desc;
     private String avatarUri;
 
+
     public Agenda(String titulo,
                   String lugar, String hora,
                   String desc, String avatarUri) {
@@ -74,8 +75,5 @@ public class Agenda {
         return desc;
     }
 
-    public String getAvatarUri() {
-        return avatarUri;
-    }
 
 }
